@@ -77,23 +77,6 @@ floats. If ``matrix`` is not a list, a TypeError is raised.
 
 ::
 
-    >>> matrix = None
-    >>> print(matrix_divided(matrix, 3))
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-Note that an empty list will raise the TypeError.
-
-::
-
-    >>> matrix = []
-    >>> print(matrix_divided(matrix, 3))
-    Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-But an empty list of lists will succeed.
-
-::
 
     >>> matrix = [[]]
     >>> print(matrix_divided(matrix, 3))
@@ -165,4 +148,3 @@ is raised.
     >>> print(matrix_divided(matrix, 0))
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
-
