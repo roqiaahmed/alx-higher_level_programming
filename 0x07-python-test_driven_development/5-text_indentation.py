@@ -14,7 +14,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for ele in text:
-        print("{}".format(ele),end="")
-        if ele == "." or  ele == "?" or  ele == ":":
+        print("{}".format(ele), end="")
+        if ele == "." or ele == "?" or ele == ":":
             print()
             print()
