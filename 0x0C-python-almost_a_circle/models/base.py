@@ -5,7 +5,6 @@ import itertools
 
 class Base:
     """A class that represents a base object.
-    Private Class Attributes:
         __nb_object (int): Number of instantiated Bases.
     """
 

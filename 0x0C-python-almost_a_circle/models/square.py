@@ -67,7 +67,7 @@ class Square(Rectangle):
                     self.x = v
                 elif k == "y":
                     self.y = v
-    
+
 
     def __str__(self):
         """Return [Square] (<id>) <x>/<y> - <size>"""
