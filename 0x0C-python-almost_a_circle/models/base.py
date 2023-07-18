@@ -4,7 +4,11 @@ import json
 import itertools
 
 class Base:
-    """A class that represents a base object.
+    """Base model.
+
+    This Represents the "base" for all other classes.
+
+    Private Class Attributes:
         __nb_object (int): Number of instantiated Bases.
     """
 
