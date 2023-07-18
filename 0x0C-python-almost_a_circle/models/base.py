@@ -2,16 +2,14 @@
 """Defines a base model class."""
 
 import json
-import itertools
-
 
 class Base:
     """Base model.
 
-    This represents the "base" for all other classes.
+    This Represents the "base" for all other classes.
 
     Private Class Attributes:
-        __nb_objects (int): Number of instantiated Bases.
+        __nb_object (int): Number of instantiated Bases.
     """
 
     __nb_objects = 0
@@ -62,10 +60,10 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Returns the list of the JSON string.
+        """Returns the list of the JSON string
 
         Args:
-            json_string (str): A string representing a list of dictionaries.
+            json_string (str): A string representing a list of dictionaries
         """
         if json_string is None or json_string == []:
             return []
@@ -74,7 +72,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Return a class instantiated from a dictionary of attributes.
+        """Return a class instantied from a dictionary of attributes.
 
         Args:
             **dictionary (dict): Key/value pairs of attributes to initialize.
