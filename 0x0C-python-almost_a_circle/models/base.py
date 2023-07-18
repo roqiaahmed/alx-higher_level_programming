@@ -4,7 +4,10 @@ import json
 import itertools
 
 class Base:
-    """A class that represents a base object."""
+    """A class that represents a base object.
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
+    """
 
     __nb_objects = 0
 
@@ -13,7 +16,7 @@ class Base:
         Initializes a new Base object.
 
         Args:
-            id (int, optional): An optional integer representing the ID of the Base object. Defaults to None.
+            id (int, optional): An optional integer representing.
 
         Returns:
             None
@@ -63,7 +66,7 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-        
+
     @classmethod
     def create(cls, **dictionary):
         """Return a class instantied from a dictionary of attributes.
