@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const arg = process.argv[2];
-const C = "C is fun";
+const C = 'C is fun';
 
 if (!isNaN(arg)) {
   for (let i = 0; i < arg; i++) {
