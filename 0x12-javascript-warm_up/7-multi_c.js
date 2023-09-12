@@ -8,5 +8,5 @@ if (!isNaN(arg)) {
     console.log(C);
   }
 } else {
-  console.log("Missing number of occurrences");
+  console.log('Missing number of occurrences');
 }
