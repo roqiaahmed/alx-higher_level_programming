@@ -3,7 +3,7 @@
 const items = process.argv;
 
 if (items.length > 2) {
-  if (items.length == 3 && items[2] === "1") {
+  if (items.length == 3 && items[2] === '1') {
     console.log(0);
   } else {
     let arr = new Array(items.length - 2);
