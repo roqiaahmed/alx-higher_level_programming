@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const size = process.argv[2];
-const item = "X";
+const item = 'X';
 
 if (!isNaN(size)) {
   for (let i = 0; i < size; i++) {
