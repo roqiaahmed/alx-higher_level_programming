@@ -1,2 +1,3 @@
 #!/bin/bash
-curl -sI "$1" | grep 'content-length' | cut -d " " -f2
+# displays the size of the body of the response
+curl -s "$1" | wc -c
