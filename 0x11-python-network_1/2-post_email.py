@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""displays the value of the X-Request-Id variable found in
+the header of the response.
+"""
 
 
 if __name__ == "__main__":
@@ -6,12 +9,9 @@ if __name__ == "__main__":
     from urllib.parse import urlencode
     from sys import argv
 
-    url = argv[1]
-    values = {'email' : argv[2]}
-
-    data = urlencode(values)
-    data = data.encode('ascii') # data should be bytes
-    req = Request(url, data)
-    with urlopen(req) as response:
+    value = {"email": argv[2]}
+    request = Request(
+            argv[1], urlencode(value).encode("ascii"))
+    with urlopen(request) as response:
         head = response.headers.get('X-Request-Id')
         print(response.read().decode('utf-8'))
