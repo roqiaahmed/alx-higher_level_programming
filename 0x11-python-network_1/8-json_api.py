@@ -11,9 +11,9 @@ if __name__ == "__main__":
     q = argv[1] if len(argv) > 1 else ""
     r = post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
-        r.json()
-        if r:
-            print("[{}] {}".format(r.get("id"), r.get("name")))
+        response = r.json()
+        if response:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
         else:
             print("No result")
     except ValueError:
