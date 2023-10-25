@@ -2,16 +2,17 @@
 
 const request = require("request");
 const character_ID = 18;
-request(process.argv[2], (_err, body) => {
-  const res = JSON.parse(body);
-  let num;
-  for (result in res["results"]) {
-    for (character in result["characters"]) {
-      let count = character.split(String(character_ID)).length - 1;
-      if ((count = 1)) {
-        num += 1;
+let times = 0;
+request(process.argv[2], (_err, _res, body) => {
+  body = JSON.parse(body).results;
+  for (let i = 0; i < body.length; i++) {
+    const characters = body[i].characters;
+    for (let j = 0; j < characters.length; j++) {
+      const character = characters[j];
+      if (character.split("/")[5] === String(character_ID)) {
+        times += 1;
       }
     }
   }
-  return num;
+  console.log(times);
 });
