@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require("request");
+const request = require('request');
 const character_ID = 18;
 let times = 0;
 request(process.argv[2], (_err, _res, body) => {
@@ -9,7 +9,7 @@ request(process.argv[2], (_err, _res, body) => {
     const characters = body[i].characters;
     for (let j = 0; j < characters.length; j++) {
       const character = characters[j];
-      if (character.split("/")[5] === String(character_ID)) {
+      if (character.split('/')[5] === String(character_ID)) {
         times += 1;
       }
     }
