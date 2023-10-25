@@ -2,9 +2,9 @@
 
 const request = require("request");
 
-request(process.argv[2], (err, body) => {
+request(process.argv[2], (err, _res, body) => {
   if (err) {
-    console.log();
+    console.log(err);
   }
   const completedTasksByUsers = {};
   body = JSON.parse(body);
